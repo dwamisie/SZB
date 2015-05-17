@@ -1,0 +1,619 @@
+﻿body
+{    
+   text-align:center;
+}
+/*STRONA GŁÓWNA*/
+.admin
+{
+    padding: 10px;
+    background-image: url('img/adminLight.png');
+    background-repeat: no-repeat;
+    background-position:5px;
+    margin:10px;
+    height:100px;
+    width:200px;
+    text-align: right;
+    color:black;
+    font-weight: bold;
+    padding-top:40px;
+    background-color:lightgreen;
+}
+.admin:hover 
+{
+    background-image: url('img/adminDark.png');
+    background-color:darkcyan;
+    color:white;
+}
+.blad 
+{
+    padding: 10px;
+    background-image: url('img/bladLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align:center;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color:lightgreen;
+}
+.blad:hover 
+{
+        background-image: url('img/bladDark.png');
+        background-color: darkcyan;
+        color: white;
+}
+.incydent 
+{
+    padding: 10px;
+    background-image: url('img/IncLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color:lightgreen;
+}
+.incydent:hover 
+{
+    background-image: url('img/IncDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.zglos_incydent
+{
+    padding: 10px;
+    background-image: url('img/zglosLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color:lightgreen;
+}
+.zglos_incydent:hover 
+{
+    background-image: url('img/zglosDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+/*WSZYSTKO O ADMINISTRACJI*/
+.konto {
+    padding: 10px;
+    background-image: url('img/kontoLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 160px;
+    text-align:right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color:lightgreen;
+}
+.konto:hover 
+{
+    background-image: url('img/kontoDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.panel 
+{
+    padding: 10px;
+    background-image: url('img/panelLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 250px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color:lightgreen;
+}
+.panel:hover 
+{
+    background-image: url('img/panelDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.slownik 
+{
+    padding: 10px;
+    background-image: url('img/slownikLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 160px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color:lightgreen;
+}
+.slownik:hover 
+{
+    background-image: url('img/slownikDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.ustawienia_sys 
+{
+    padding: 10px;
+    background-image: url('img/Ustawienia_sysLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 160px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.ustawienia_sys:hover 
+{
+    background-image: url('img/Ustawienia_sysDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.usun 
+{
+    padding: 10px;
+    background-image: url('img/usunkontoLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 250px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.usun:hover 
+{
+    background-image: url('img/usunkontoDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.produkt
+{
+    padding: 10px;
+    background-image: url('img/ProduktLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.produkt:hover 
+{
+   background-image: url('img/ProduktDark.png');
+   background-color: darkcyan;
+   color: white;
+}
+.zmien_ustawienia 
+{
+    padding: 10px;
+    background-image: url('img/zmien_ustawieniaLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.zmien_ustawienia:hover 
+{
+    background-image: url('img/zmien_ustawieniaDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.zmien_parametry_konta 
+{
+    padding: 10px;
+    background-image: url('img/Zmien_parametr_kontaLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 250px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.zmien_parametry_konta:hover 
+{
+    background-image: url('img/Zmien_parametr_kontaDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.klasyfikacja 
+{
+    padding: 10px;
+    background-image: url('img/klasyfikacjaLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.klasyfikacja:hover
+{
+    background-image: url('img/klasyfikacjaDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.klienci 
+{
+    padding: 10px;
+    background-image: url('img/klienciLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.klienci:hover
+{
+    background-image: url('img/klienciDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.status 
+{
+    padding: 10px;
+    background-image: url('img/statusLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.status:hover
+{
+    background-image: url('img/statusDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.typbledu 
+{
+    padding: 10px;
+    background-image: url('img/typ_bleduLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.typbledu:hover 
+{
+    background-image: url('img/typ_bleduDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.warstwa 
+{
+    padding: 10px;
+    background-image: url('img/warstwaLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.warstwa:hover 
+{
+    background-image: url('img/warstwaDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+/*WSZYSTKO O BŁĘDACH*/
+.napraw_blad 
+{
+    padding: 10px;
+    background-image: url('img/naprBladLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.napraw_blad:hover
+{
+    background-image: url('img/naprBladDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.zarzadzanie 
+{
+    padding: 10px;
+    background-image: url('img/zarzadzanieLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.zarzadzanie:hover
+{
+    background-image: url('img/zarzadzanieDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.analiza_bledu 
+{
+    padding: 10px;
+    background-image: url('img/analizaLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.analiza_bledu:hover 
+{
+    background-image: url('img/analizaDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.kontakt_zglaszajacy 
+{
+    padding: 10px;
+    background-image: url('img/kontaktLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.kontakt_zglaszajacy:hover 
+{
+    background-image: url('img/kontaktDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+/*WSZYSTKO O INCYDENTACH*/
+.moje_incydenty 
+{
+    padding: 10px;
+    background-image: url('img/mojeincydenty_Light.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.moje_incydenty:hover 
+{
+    background-image: url('img/mojeincydentyDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.zarzadz_incydent 
+{
+    padding: 10px;
+    background-image: url('img/zarzadzanie_incydentamiLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.zarzadz_incydent:hover 
+{
+    background-image: url('img/zarzadzanieDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+/*WSZYSTKO O ZARZĄDZANIU INCYDENTAMI*/
+.analiza_incydent 
+{
+    padding: 10px;
+    background-image: url('img/analizaIncydentuLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.analiza_incydent:hover 
+{
+    background-image: url('img/analizaincydentuDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.eskalacja 
+{
+    padding: 10px;
+    background-image: url('img/eskalacjaLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.eskalacja:hover 
+{
+    background-image: url('img/eskalacjaDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.napr_zakon_incydent 
+{
+    padding: 10px;
+    background-image: url('img/naprawienieIncydentuLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.napr_zakon_incydent:hover 
+{
+    background-image: url('img/naprawienie_incydentuDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+/*WSZYSTKO O ZGŁOSZENIU INCYDENTU*/
+.zglaszajacy 
+{
+    padding: 10px;
+    background-image: url('img/zglaszajacyLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.zglaszajacy:hover 
+{
+    background-image: url('img/zglaszajacyDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+/*WSZYSTKKO O ESKALACJI*/
+.nowy_blad 
+{
+    padding: 10px;
+    background-image: url('img/nowy_bladLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.nowy_blad:hover 
+{
+    background-image: url('img/nowy_bladDark.png');
+    background-color: darkcyan;
+    color: white;
+}
+.znany_blad 
+{
+    padding: 10px;
+    background-image: url('img/znany_bladLight.png');
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    padding-top: 40px;
+    background-color: lightgreen;
+}
+.znany_blad:hover 
+{
+    background-image: url('img/znany_bladDark.png');
+    background-color: darkcyan;
+    color: white;
+}
