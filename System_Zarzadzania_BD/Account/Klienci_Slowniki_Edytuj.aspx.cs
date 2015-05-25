@@ -104,5 +104,64 @@ namespace System_Zarzadzania_BD.Account
             Response.Redirect("~\\Account\\Klienci_Slowniki.aspx");
         }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            try
+            {
+                conn.Open();
+
+                SqlCommand comm2 = new SqlCommand();
+                comm2.Connection = conn;
+                comm2.CommandType = CommandType.StoredProcedure;
+                comm2.CommandText = "dbo.klient_produkt_insert";
+                comm2.Parameters.AddWithValue("@id_klient", this.kod_klienta.Text.Trim());
+                comm2.Parameters.AddWithValue("@id_produkt", this.kod_produktu.SelectedValue.ToString().Trim());
+
+                comm2.ExecuteNonQuery();
+
+                comm2.Dispose();
+                conn.Close();
+
+                this.GridView1.DataBind();
+                this.kod_produktu.DataBind();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            try
+            {
+                conn.Open();
+
+                SqlCommand comm2 = new SqlCommand();
+                comm2.Connection = conn;
+                comm2.CommandType = CommandType.StoredProcedure;
+                comm2.CommandText = "dbo.klient_produkt_close";
+                comm2.Parameters.AddWithValue("@id_klient", this.kod_klienta.Text.Trim());
+                comm2.Parameters.AddWithValue("@id_produkt", this.GridView1.SelectedRow.Cells[0].Text.ToString().Trim());
+                comm2.ExecuteNonQuery();
+
+                comm2.Dispose();
+                conn.Close();
+
+                this.GridView1.DataBind();
+                this.kod_produktu.DataBind();
+
+            }
+            catch (Exception ex)
+            {
+                this.Literal1.Text = ex.Message;
+            }
+
+        }
+
      }
 }

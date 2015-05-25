@@ -6,5 +6,6 @@
     <a href="Typ_bledu_Slowniki.aspx"><div class="typbledu">Typ błędu</div></a>
     <a href="Warstwa_Slowniki.aspx"><div class="warstwa">Warstwa</div></a>
     <a href="Klasyfikacja_Slowniki.aspx"><div class="klasyfikacja">Klasyfikacja</div></a>
+    <asp:Button ID="Button1" runat="server" Text="Powrót do Panelu Sterowania" OnClick="Button1_Click" />
 
 </asp:Content>

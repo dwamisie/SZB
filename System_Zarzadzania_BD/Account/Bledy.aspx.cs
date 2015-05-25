@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace System_Zarzadzania_BD.Account
 {
@@ -11,7 +12,10 @@ namespace System_Zarzadzania_BD.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!User.IsInRole("Administrator"))
+            {
+                Response.Redirect("~\\Account\\BrakUprawnien.aspx");
+            }
         }
     }
 }

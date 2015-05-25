@@ -488,70 +488,6 @@
     background-color: darkcyan;
     color: white;
 }
-/*WSZYSTKO O ZARZĄDZANIU INCYDENTAMI*/
-.analiza_incydent 
-{
-    padding: 10px;
-    background-image: url('img/analizaIncydentuLight.png');
-    background-repeat: no-repeat;
-    background-position: 5px;
-    margin: 10px;
-    height: 100px;
-    width: 200px;
-    text-align: right;
-    color: black;
-    font-weight: bold;
-    padding-top: 40px;
-    background-color: lightgreen;
-}
-.analiza_incydent:hover 
-{
-    background-image: url('img/analizaincydentuDark.png');
-    background-color: darkcyan;
-    color: white;
-}
-.eskalacja 
-{
-    padding: 10px;
-    background-image: url('img/eskalacjaLight.png');
-    background-repeat: no-repeat;
-    background-position: 5px;
-    margin: 10px;
-    height: 100px;
-    width: 200px;
-    text-align: right;
-    color: black;
-    font-weight: bold;
-    padding-top: 40px;
-    background-color: lightgreen;
-}
-.eskalacja:hover 
-{
-    background-image: url('img/eskalacjaDark.png');
-    background-color: darkcyan;
-    color: white;
-}
-.napr_zakon_incydent 
-{
-    padding: 10px;
-    background-image: url('img/naprawienieIncydentuLight.png');
-    background-repeat: no-repeat;
-    background-position: 5px;
-    margin: 10px;
-    height: 100px;
-    width: 200px;
-    text-align: right;
-    color: black;
-    font-weight: bold;
-    padding-top: 40px;
-    background-color: lightgreen;
-}
-.napr_zakon_incydent:hover 
-{
-    background-image: url('img/naprawienie_incydentuDark.png');
-    background-color: darkcyan;
-    color: white;
-}
 /*WSZYSTKO O ZGŁOSZENIU INCYDENTU*/
 .zglaszajacy 
 {
@@ -561,7 +497,7 @@
     background-position: 5px;
     margin: 10px;
     height: 100px;
-    width: 200px;
+    width: 300px;
     text-align: right;
     color: black;
     font-weight: bold;
@@ -571,49 +507,6 @@
 .zglaszajacy:hover 
 {
     background-image: url('img/zglaszajacyDark.png');
-    background-color: darkcyan;
-    color: white;
-}
-/*WSZYSTKKO O ESKALACJI*/
-.nowy_blad 
-{
-    padding: 10px;
-    background-image: url('img/nowy_bladLight.png');
-    background-repeat: no-repeat;
-    background-position: 5px;
-    margin: 10px;
-    height: 100px;
-    width: 200px;
-    text-align: right;
-    color: black;
-    font-weight: bold;
-    padding-top: 40px;
-    background-color: lightgreen;
-}
-.nowy_blad:hover 
-{
-    background-image: url('img/nowy_bladDark.png');
-    background-color: darkcyan;
-    color: white;
-}
-.znany_blad 
-{
-    padding: 10px;
-    background-image: url('img/znany_bladLight.png');
-    background-repeat: no-repeat;
-    background-position: 5px;
-    margin: 10px;
-    height: 100px;
-    width: 200px;
-    text-align: right;
-    color: black;
-    font-weight: bold;
-    padding-top: 40px;
-    background-color: lightgreen;
-}
-.znany_blad:hover 
-{
-    background-image: url('img/znany_bladDark.png');
     background-color: darkcyan;
     color: white;
 }

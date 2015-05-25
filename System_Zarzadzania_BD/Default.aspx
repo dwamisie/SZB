@@ -33,7 +33,7 @@
             <p>
                 Kliknij w przycisk Zgłoś incydent i przejdź do Zgłoś Incyent.
             </p>
-           <a href="Account/Zglos.aspx"><div class="zglos_incydent">Zgłoś incydent</div></a>
+           <a href="Account/Zgloszenie_Incydentu.aspx"><div class="zglos_incydent">Zgłoś incydent</div></a>
         </div>
     </div>
 

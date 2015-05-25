@@ -38,6 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.1.100, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\AppData\Local\Microsoft\VisualStudio\12.0\Extensions\oet2z1kp.ykn\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -149,11 +153,9 @@
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Administracja.aspx" />
     <Content Include="Account\Analiza_Bledu.aspx" />
-    <Content Include="Account\Analiza_Incydentu.aspx" />
     <Content Include="Account\Bledy.aspx" />
     <Content Include="Account\BrakUprawnien.aspx" />
     <Content Include="Account\Confirm.aspx" />
-    <Content Include="Account\eskalacja.aspx" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\Incydent.aspx" />
     <Content Include="Account\Klasyfikacja_Slowniki.aspx" />
@@ -169,8 +171,6 @@
     <Content Include="Account\ManagePassword.aspx" />
     <Content Include="Account\moje_incydenty.aspx" />
     <Content Include="Account\Naprawienie_Bledu.aspx" />
-    <Content Include="Account\Napr_zakonczenie_incydentu.aspx" />
-    <Content Include="Account\Nowy_Blad_Eskalacja.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Panel_Sterowania.aspx" />
     <Content Include="Account\Produkty_Slowniki.aspx" />
@@ -196,7 +196,6 @@
     <Content Include="Account\Zgloszenie_Incydentu.aspx" />
     <Content Include="Account\Zmien_parametry.aspx" />
     <Content Include="Account\Zmien_ustawienia.aspx" />
-    <Content Include="Account\Znany_Blad_Eskalacja.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -340,13 +339,6 @@
     <Compile Include="Account\Analiza_Bledu.aspx.designer.cs">
       <DependentUpon>Analiza_Bledu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Analiza_Incydentu.aspx.cs">
-      <DependentUpon>Analiza_Incydentu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Analiza_Incydentu.aspx.designer.cs">
-      <DependentUpon>Analiza_Incydentu.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\Bledy.aspx.cs">
       <DependentUpon>Bledy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -367,13 +359,6 @@
     </Compile>
     <Compile Include="Account\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\eskalacja.aspx.cs">
-      <DependentUpon>eskalacja.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\eskalacja.aspx.designer.cs">
-      <DependentUpon>eskalacja.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
@@ -479,20 +464,6 @@
     </Compile>
     <Compile Include="Account\Naprawienie_Bledu.aspx.designer.cs">
       <DependentUpon>Naprawienie_Bledu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Napr_zakonczenie_incydentu.aspx.cs">
-      <DependentUpon>Napr_zakonczenie_incydentu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Napr_zakonczenie_incydentu.aspx.designer.cs">
-      <DependentUpon>Napr_zakonczenie_incydentu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Nowy_Blad_Eskalacja.aspx.cs">
-      <DependentUpon>Nowy_Blad_Eskalacja.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Nowy_Blad_Eskalacja.aspx.designer.cs">
-      <DependentUpon>Nowy_Blad_Eskalacja.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\OpenAuthProviders.ascx.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
@@ -668,13 +639,6 @@
     </Compile>
     <Compile Include="Account\Zmien_ustawienia.aspx.designer.cs">
       <DependentUpon>Zmien_ustawienia.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Znany_Blad_Eskalacja.aspx.cs">
-      <DependentUpon>Znany_Blad_Eskalacja.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Znany_Blad_Eskalacja.aspx.designer.cs">
-      <DependentUpon>Znany_Blad_Eskalacja.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

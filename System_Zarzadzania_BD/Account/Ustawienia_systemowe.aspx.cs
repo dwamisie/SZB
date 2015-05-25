@@ -13,5 +13,10 @@ namespace System_Zarzadzania_BD.Account
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~\\Account\\Panel_Sterowania.aspx");
+        }
     }
 }

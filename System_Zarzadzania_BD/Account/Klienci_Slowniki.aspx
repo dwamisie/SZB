@@ -31,4 +31,5 @@
     </asp:GridView>
      <asp:Button ID="Button1" runat="server" Height="40px" OnClick="Button1_Click" Text="Nowy" Width="113px" />
      <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+     <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Powrót" />
 </asp:Content>

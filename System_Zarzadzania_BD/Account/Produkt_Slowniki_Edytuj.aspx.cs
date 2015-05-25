@@ -26,7 +26,7 @@ namespace System_Zarzadzania_BD.Account
                     SqlCommand comm2 = new SqlCommand();
                     comm2.Connection = conn;
                     comm2.CommandType = CommandType.Text;
-                    comm2.CommandText = "select id_podukt, nazwa, wersja, opis, from dbo.produkt where id_produkt=" + id_pozycji + ";";
+                    comm2.CommandText = "select id_produkt, nazwa, wersja, opis from dbo.produkt where id_produkt=" + id_pozycji + ";";
                     SqlDataReader rdr = comm2.ExecuteReader();
 
                     while (rdr.Read())
@@ -45,7 +45,7 @@ namespace System_Zarzadzania_BD.Account
                 }
                 catch (Exception ex)
                 {
-
+                    
                 }
             }
         }

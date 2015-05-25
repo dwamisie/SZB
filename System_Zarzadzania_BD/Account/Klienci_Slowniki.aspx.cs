@@ -72,5 +72,10 @@ namespace System_Zarzadzania_BD.Account
         {
           Response.Redirect("~\\Account\\Klienci_Slowniki_Edytuj.aspx?id=" + this.GridView1.SelectedRow.Cells[0].Text.Trim());
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~\\Account\\Slowniki.aspx");
+        }
     }
 }
