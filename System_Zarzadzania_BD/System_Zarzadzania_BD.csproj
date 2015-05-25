@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA914BB5-D6FE-46DD-86F2-B76AD35B31DA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System_Zarzadzania_BD</RootNamespace>
+    <AssemblyName>System_Zarzadzania_BD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.1.100, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\AppData\Local\Microsoft\VisualStudio\12.0\Extensions\oet2z1kp.ykn\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Administracja.aspx" />
+    <Content Include="Account\Analiza_Bledu.aspx" />
+    <Content Include="Account\Bledy.aspx" />
+    <Content Include="Account\BrakUprawnien.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Incydent.aspx" />
+    <Content Include="Account\Klasyfikacja_Slowniki.aspx" />
+    <Content Include="Account\Klasyfikacja_Slowniki_Edytuj.aspx" />
+    <Content Include="Account\Klienci_Slowniki.aspx" />
+    <Content Include="Account\Klienci_Slowniki_Edytuj.aspx" />
+    <Content Include="Account\Konta.aspx" />
+    <Content Include="Account\kontakt_ze_zglaszajacym.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\moje_incydenty.aspx" />
+    <Content Include="Account\Naprawienie_Bledu.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Panel_Sterowania.aspx" />
+    <Content Include="Account\Produkty_Slowniki.aspx" />
+    <Content Include="Account\Produkt_Slowniki_Edytuj.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\Slowniki.aspx" />
+    <Content Include="Account\Status_Slowniki.aspx" />
+    <Content Include="Account\Status_Slowniki_Edytuj.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\Typ_bledu_Slowniki.aspx" />
+    <Content Include="Account\Typ_bledu_Slowniki_Edytuj.aspx" />
+    <Content Include="Account\Ustawienia_systemowe.aspx" />
+    <Content Include="Account\Usun_konto.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Account\Warstwa_Slowniki.aspx" />
+    <Content Include="Account\Warstwa_Slowniki_Edytuj.aspx" />
+    <Content Include="Account\Zarzadzanie_bledami.aspx" />
+    <Content Include="Account\zarzadzanie_incydentami.aspx" />
+    <Content Include="Account\Zglos.aspx" />
+    <Content Include="Account\Zgloszenie_Incydentu.aspx" />
+    <Content Include="Account\Zmien_parametry.aspx" />
+    <Content Include="Account\Zmien_ustawienia.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\adminDark.png" />
+    <Content Include="img\adminLight.png" />
+    <Content Include="img\analizaDark.png" />
+    <Content Include="img\analizaincydentuDark.png" />
+    <Content Include="img\analizaIncydentuLight.png" />
+    <Content Include="img\analizaLight.png" />
+    <Content Include="img\bladDark.png" />
+    <Content Include="img\bladLight.png" />
+    <Content Include="img\eskalacjaDark.png" />
+    <Content Include="img\eskalacjaLight.png" />
+    <Content Include="img\IncDark.png" />
+    <Content Include="img\IncLight.png" />
+    <Content Include="img\klasyfikacjaDark.png" />
+    <Content Include="img\klasyfikacjaLight.png" />
+    <Content Include="img\klienciDark.png" />
+    <Content Include="img\klienciLight.png" />
+    <Content Include="img\kontaktDark.png" />
+    <Content Include="img\kontaktLight.png" />
+    <Content Include="img\kontoDark.png" />
+    <Content Include="img\kontoLight.png" />
+    <Content Include="img\mojeincydentyDark.png" />
+    <Content Include="img\mojeincydenty_Light.png" />
+    <Content Include="img\naprawienieIncydentuLight.png" />
+    <Content Include="img\naprawienie_incydentuDark.png" />
+    <Content Include="img\naprBladDark.png" />
+    <Content Include="img\naprBladLight.png" />
+    <Content Include="img\nowy_bladDark.png" />
+    <Content Include="img\nowy_bladLight.png" />
+    <Content Include="img\panelDark.png" />
+    <Content Include="img\panelLight.png" />
+    <Content Include="img\ProduktDark.png" />
+    <Content Include="img\ProduktLight.png" />
+    <Content Include="img\slownikDark.png" />
+    <Content Include="img\slownikLight.png" />
+    <Content Include="img\statusDark.png" />
+    <Content Include="img\statusLight.png" />
+    <Content Include="img\typ_bleduDark.png" />
+    <Content Include="img\typ_bleduLight.png" />
+    <Content Include="img\ustaw.jpg" />
+    <Content Include="img\ustaw2.jpg" />
+    <Content Include="img\Ustawienia_sysDark.png" />
+    <Content Include="img\Ustawienia_sysLight.png" />
+    <Content Include="img\usunkontoDark.png" />
+    <Content Include="img\usunkontoLight.png" />
+    <Content Include="img\warstwaDark.png" />
+    <Content Include="img\warstwaLight.png" />
+    <Content Include="img\zarzadzanieDark.png" />
+    <Content Include="img\zarzadzanieLight.png" />
+    <Content Include="img\zarzadzanie_incydentamiDark.png" />
+    <Content Include="img\zarzadzanie_incydentamiLight.png" />
+    <Content Include="img\zglaszajacyDark.png" />
+    <Content Include="img\zglaszajacyLight.png" />
+    <Content Include="img\zglosDark.png" />
+    <Content Include="img\zglosLight.png" />
+    <Content Include="img\Zmien_parametr_kontaDark.png" />
+    <Content Include="img\Zmien_parametr_kontaLight.png" />
+    <Content Include="img\zmien_ustawieniaDark.png" />
+    <Content Include="img\zmien_ustawieniaLight.png" />
+    <Content Include="img\znany_bladDark.png" />
+    <Content Include="img\znany_bladLight.png" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <None Include="Properties\PublishProfiles\szb.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Administracja.aspx.cs">
+      <DependentUpon>Administracja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Administracja.aspx.designer.cs">
+      <DependentUpon>Administracja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Analiza_Bledu.aspx.cs">
+      <DependentUpon>Analiza_Bledu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Analiza_Bledu.aspx.designer.cs">
+      <DependentUpon>Analiza_Bledu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Bledy.aspx.cs">
+      <DependentUpon>Bledy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Bledy.aspx.designer.cs">
+      <DependentUpon>Bledy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\BrakUprawnien.aspx.cs">
+      <DependentUpon>BrakUprawnien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\BrakUprawnien.aspx.designer.cs">
+      <DependentUpon>BrakUprawnien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Incydent.aspx.cs">
+      <DependentUpon>Incydent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Incydent.aspx.designer.cs">
+      <DependentUpon>Incydent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Klasyfikacja_Slowniki.aspx.cs">
+      <DependentUpon>Klasyfikacja_Slowniki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Klasyfikacja_Slowniki.aspx.designer.cs">
+      <DependentUpon>Klasyfikacja_Slowniki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Klasyfikacja_Slowniki_Edytuj.aspx.cs">
+      <DependentUpon>Klasyfikacja_Slowniki_Edytuj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Klasyfikacja_Slowniki_Edytuj.aspx.designer.cs">
+      <DependentUpon>Klasyfikacja_Slowniki_Edytuj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Klienci_Slowniki.aspx.cs">
+      <DependentUpon>Klienci_Slowniki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Klienci_Slowniki.aspx.designer.cs">
+      <DependentUpon>Klienci_Slowniki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Klienci_Slowniki_Edytuj.aspx.cs">
+      <DependentUpon>Klienci_Slowniki_Edytuj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Klienci_Slowniki_Edytuj.aspx.designer.cs">
+      <DependentUpon>Klienci_Slowniki_Edytuj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Konta.aspx.cs">
+      <DependentUpon>Konta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Konta.aspx.designer.cs">
+      <DependentUpon>Konta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\kontakt_ze_zglaszajacym.aspx.cs">
+      <DependentUpon>kontakt_ze_zglaszajacym.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\kontakt_ze_zglaszajacym.aspx.designer.cs">
+      <DependentUpon>kontakt_ze_zglaszajacym.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\moje_incydenty.aspx.cs">
+      <DependentUpon>moje_incydenty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\moje_incydenty.aspx.designer.cs">
+      <DependentUpon>moje_incydenty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Naprawienie_Bledu.aspx.cs">
+      <DependentUpon>Naprawienie_Bledu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Naprawienie_Bledu.aspx.designer.cs">
+      <DependentUpon>Naprawienie_Bledu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Panel_Sterowania.aspx.cs">
+      <DependentUpon>Panel_Sterowania.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Panel_Sterowania.aspx.designer.cs">
+      <DependentUpon>Panel_Sterowania.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Produkty_Slowniki.aspx.cs">
+      <DependentUpon>Produkty_Slowniki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Produkty_Slowniki.aspx.designer.cs">
+      <DependentUpon>Produkty_Slowniki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Produkt_Slowniki_Edytuj.aspx.cs">
+      <DependentUpon>Produkt_Slowniki_Edytuj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Produkt_Slowniki_Edytuj.aspx.designer.cs">
+      <DependentUpon>Produkt_Slowniki_Edytuj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Slowniki.aspx.cs">
+      <DependentUpon>Slowniki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Slowniki.aspx.designer.cs">
+      <DependentUpon>Slowniki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Status_Slowniki.aspx.cs">
+      <DependentUpon>Status_Slowniki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Status_Slowniki.aspx.designer.cs">
+      <DependentUpon>Status_Slowniki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Status_Slowniki_Edytuj.aspx.cs">
+      <DependentUpon>Status_Slowniki_Edytuj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Status_Slowniki_Edytuj.aspx.designer.cs">
+      <DependentUpon>Status_Slowniki_Edytuj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Typ_bledu_Slowniki.aspx.cs">
+      <DependentUpon>Typ_bledu_Slowniki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Typ_bledu_Slowniki.aspx.designer.cs">
+      <DependentUpon>Typ_bledu_Slowniki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Typ_bledu_Slowniki_Edytuj.aspx.cs">
+      <DependentUpon>Typ_bledu_Slowniki_Edytuj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Typ_bledu_Slowniki_Edytuj.aspx.designer.cs">
+      <DependentUpon>Typ_bledu_Slowniki_Edytuj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Ustawienia_systemowe.aspx.cs">
+      <DependentUpon>Ustawienia_systemowe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Ustawienia_systemowe.aspx.designer.cs">
+      <DependentUpon>Ustawienia_systemowe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Usun_konto.aspx.cs">
+      <DependentUpon>Usun_konto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Usun_konto.aspx.designer.cs">
+      <DependentUpon>Usun_konto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Warstwa_Slowniki.aspx.cs">
+      <DependentUpon>Warstwa_Slowniki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Warstwa_Slowniki.aspx.designer.cs">
+      <DependentUpon>Warstwa_Slowniki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Warstwa_Slowniki_Edytuj.aspx.cs">
+      <DependentUpon>Warstwa_Slowniki_Edytuj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Warstwa_Slowniki_Edytuj.aspx.designer.cs">
+      <DependentUpon>Warstwa_Slowniki_Edytuj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zarzadzanie_bledami.aspx.cs">
+      <DependentUpon>Zarzadzanie_bledami.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zarzadzanie_bledami.aspx.designer.cs">
+      <DependentUpon>Zarzadzanie_bledami.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\zarzadzanie_incydentami.aspx.cs">
+      <DependentUpon>zarzadzanie_incydentami.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\zarzadzanie_incydentami.aspx.designer.cs">
+      <DependentUpon>zarzadzanie_incydentami.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zglos.aspx.cs">
+      <DependentUpon>Zglos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zglos.aspx.designer.cs">
+      <DependentUpon>Zglos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zgloszenie_Incydentu.aspx.cs">
+      <DependentUpon>Zgloszenie_Incydentu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zgloszenie_Incydentu.aspx.designer.cs">
+      <DependentUpon>Zgloszenie_Incydentu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zmien_parametry.aspx.cs">
+      <DependentUpon>Zmien_parametry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zmien_parametry.aspx.designer.cs">
+      <DependentUpon>Zmien_parametry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zmien_ustawienia.aspx.cs">
+      <DependentUpon>Zmien_ustawienia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zmien_ustawienia.aspx.designer.cs">
+      <DependentUpon>Zmien_ustawienia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56185</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56185/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
