@@ -100,7 +100,7 @@ namespace System_Zarzadzania_BD.Account
                     msg.CC.Add(new MailAddress("marty_w@wp.pl"));
 
                     msg.Subject = "[SZB] Zarejestrowano incydent.";
-                    msg.Body = "<b>Witam! Właśnie został zarejestrowany incydent Pańskiego produktu.</b> <p>________________________________________________</p> <code>Pozdrawiam,Automatyczny system obsługi SZB</code> <h4>http://www.szb.azurewebsites.net/</h4>";
+                    msg.Body = "<b>Witam! Właśnie został zarejestrowany incydent Pańskiego produktu.</b> <p>________________________________________________</p> <code>Pozdrawiam,Automatyczny system obsługi SZB</code>  <h4>http://www.szb.azurewebsites.net/</h4>";
                     msg.IsBodyHtml = true;
 
                     NetworkCredential nc = new NetworkCredential("gruszczynska_katarzyna@o2.pl", "7566436629632");

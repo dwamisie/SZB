@@ -12,7 +12,7 @@ namespace System_Zarzadzania_BD.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!User.IsInRole("Administrator"))
+            if (!User.IsInRole("Administrator") && !User.IsInRole("Klient"))
             {
                 Response.Redirect("~\\Account\\BrakUprawnien.aspx");
             }

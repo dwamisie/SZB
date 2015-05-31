@@ -390,7 +390,7 @@
     background-position: 5px;
     margin: 10px;
     height: 100px;
-    width: 200px;
+    width: 250px;
     text-align: right;
     color: black;
     font-weight: bold;
@@ -432,7 +432,7 @@
     background-position: 5px;
     margin: 10px;
     height: 100px;
-    width: 200px;
+    width: 250px;
     text-align: right;
     color: black;
     font-weight: bold;
@@ -454,8 +454,8 @@
     background-position: 5px;
     margin: 10px;
     height: 100px;
-    width: 200px;
-    text-align: right;
+    width: 250px;
+    text-align: center;
     color: black;
     font-weight: bold;
     padding-top: 40px;
@@ -475,7 +475,7 @@
     background-position: 5px;
     margin: 10px;
     height: 100px;
-    width: 200px;
+    width: 250px;
     text-align: right;
     color: black;
     font-weight: bold;
@@ -484,7 +484,7 @@
 }
 .zarzadz_incydent:hover 
 {
-    background-image: url('img/zarzadzanieDark.png');
+    background-image: url('img/zarzadzanie_incydentamiDark.png');
     background-color: darkcyan;
     color: white;
 }

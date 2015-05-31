@@ -152,10 +152,10 @@
     <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Administracja.aspx" />
-    <Content Include="Account\Analiza_Bledu.aspx" />
     <Content Include="Account\Bledy.aspx" />
     <Content Include="Account\BrakUprawnien.aspx" />
     <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Eskalacja.aspx" />
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\Incydent.aspx" />
     <Content Include="Account\Klasyfikacja_Slowniki.aspx" />
@@ -170,7 +170,7 @@
     <Content Include="Account\ManageLogins.aspx" />
     <Content Include="Account\ManagePassword.aspx" />
     <Content Include="Account\moje_incydenty.aspx" />
-    <Content Include="Account\Naprawienie_Bledu.aspx" />
+    <Content Include="Account\moje_incydenty_edytuj.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Panel_Sterowania.aspx" />
     <Content Include="Account\Produkty_Slowniki.aspx" />
@@ -191,6 +191,7 @@
     <Content Include="Account\Warstwa_Slowniki.aspx" />
     <Content Include="Account\Warstwa_Slowniki_Edytuj.aspx" />
     <Content Include="Account\Zarzadzanie_bledami.aspx" />
+    <Content Include="Account\Zarzadzanie_bledami_edytuj.aspx" />
     <Content Include="Account\zarzadzanie_incydentami.aspx" />
     <Content Include="Account\Zglos.aspx" />
     <Content Include="Account\Zgloszenie_Incydentu.aspx" />
@@ -332,13 +333,6 @@
     <Compile Include="Account\Administracja.aspx.designer.cs">
       <DependentUpon>Administracja.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Analiza_Bledu.aspx.cs">
-      <DependentUpon>Analiza_Bledu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Analiza_Bledu.aspx.designer.cs">
-      <DependentUpon>Analiza_Bledu.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\Bledy.aspx.cs">
       <DependentUpon>Bledy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -359,6 +353,13 @@
     </Compile>
     <Compile Include="Account\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Eskalacja.aspx.cs">
+      <DependentUpon>Eskalacja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Eskalacja.aspx.designer.cs">
+      <DependentUpon>Eskalacja.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
@@ -458,12 +459,12 @@
     <Compile Include="Account\moje_incydenty.aspx.designer.cs">
       <DependentUpon>moje_incydenty.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\Naprawienie_Bledu.aspx.cs">
-      <DependentUpon>Naprawienie_Bledu.aspx</DependentUpon>
+    <Compile Include="Account\moje_incydenty_edytuj.aspx.cs">
+      <DependentUpon>moje_incydenty_edytuj.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Naprawienie_Bledu.aspx.designer.cs">
-      <DependentUpon>Naprawienie_Bledu.aspx</DependentUpon>
+    <Compile Include="Account\moje_incydenty_edytuj.aspx.designer.cs">
+      <DependentUpon>moje_incydenty_edytuj.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\OpenAuthProviders.ascx.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
@@ -604,6 +605,13 @@
     </Compile>
     <Compile Include="Account\Zarzadzanie_bledami.aspx.designer.cs">
       <DependentUpon>Zarzadzanie_bledami.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Zarzadzanie_bledami_edytuj.aspx.cs">
+      <DependentUpon>Zarzadzanie_bledami_edytuj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Zarzadzanie_bledami_edytuj.aspx.designer.cs">
+      <DependentUpon>Zarzadzanie_bledami_edytuj.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\zarzadzanie_incydentami.aspx.cs">
       <DependentUpon>zarzadzanie_incydentami.aspx</DependentUpon>
