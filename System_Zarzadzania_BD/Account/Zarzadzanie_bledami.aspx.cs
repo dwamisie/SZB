@@ -42,6 +42,7 @@ namespace System_Zarzadzania_BD.Account
                 comm.Parameters.AddWithValue("@kod_bledu", "Kod błędu");
                 comm.Parameters.AddWithValue("@tytul", "Tytuł");
                 comm.Parameters.AddWithValue("@opis", "Opis");
+                // tutaj cos poprawic bo za mako tego jest i w sql w insercie
                 comm.ExecuteNonQuery();
                 comm.Dispose();
 
