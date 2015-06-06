@@ -80,7 +80,7 @@ namespace System_Zarzadzania_BD.Account
                 comm2.Dispose();
                 conn.Close();
 
-                Response.Redirect("~\\Account\\Zarzadzanie_bledami.aspx" + this.Id_bledu.Text.Trim());
+                Response.Redirect("~\\Account\\Zarzadzanie_bledami.aspx?id=" + this.Id_bledu.Text.Trim());
 
             }
             catch (Exception ex)

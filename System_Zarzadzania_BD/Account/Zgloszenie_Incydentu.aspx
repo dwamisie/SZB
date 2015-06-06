@@ -5,7 +5,7 @@
     <h1>Zgłoś incydent</h1>
 
     <table>
-        <tr><td>Kod klienta</td><td><asp:TextBox ID="id_klient" runat="server" TextMode="Number" Height="25px" Width="125px"></asp:TextBox><asp:TextBox ID="UserID" runat="server" TextMode="MultiLine" Height="25px" Width="276px"></asp:TextBox></td></tr>
+        <tr><td>Kod klienta</td><td><asp:TextBox ID="id_klient" runat="server" TextMode="Number" Height="25px" Width="125px" ReadOnly="True"></asp:TextBox><asp:TextBox ID="UserID" runat="server" Height="25px" Width="276px" ReadOnly="True"></asp:TextBox></td></tr>
         <tr><td>Produkt</td><td><asp:DropDownList ID="id_produkt" runat="server" DataSourceID="SqlDataSource1" DataTextField="nazwa" DataValueField="id_produkt" Height="25px" Width="250px"></asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="GetProduktByUserID" SelectCommandType="StoredProcedure">
                 <SelectParameters>
