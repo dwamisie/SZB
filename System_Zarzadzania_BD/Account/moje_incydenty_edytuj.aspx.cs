@@ -37,6 +37,7 @@ namespace System_Zarzadzania_BD.Account
                     this.DropDownList1.SelectedValue = rdr["id_produkt"].ToString().Trim();
                     this.TytulIncydentu.Text = rdr["tytul"].ToString().Trim();
                     this.OpisIncydentu.Text = rdr["opis"].ToString().Trim();
+                    this.DiagnozaIncydentu.Text = rdr["diagnoza"].ToString().Trim();
                     this.DropDownList2.SelectedValue = rdr["id_klasyfikacja"].ToString().Trim();
                     this.DropDownList3.SelectedValue = rdr["id_status"].ToString().Trim();
 

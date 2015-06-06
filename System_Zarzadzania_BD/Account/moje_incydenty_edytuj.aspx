@@ -20,18 +20,17 @@
         <tr><td>Status klasyfikacji:</td><td>
             <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="KlasyfikacjaSrc" DataTextField="nazwa" DataValueField="id_klasyfikacja">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="KlasyfikacjaSrc" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select id_klasyfikacja,nazwa from slo.klasyfikacja order by nazwa;"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="KlasyfikacjaSrc" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [nazwa], [id_klasyfikacja] FROM [sKlasyfikacjaAktywne]"></asp:SqlDataSource>
             </td></tr>
         <tr><td>Status:</td><td>
             <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="StatusSrc" DataTextField="nazwa" DataValueField="id_status">
             </asp:DropDownList>
-            <asp:SqlDataSource ID="StatusSrc" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select id_status,nazwa from slo.status order by nazwa;"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="StatusSrc" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [id_status], [nazwa] FROM [sStatusAktywne]"></asp:SqlDataSource>
             </td></tr>
         <tr><td>Zgłaszający:</td><td>
             <asp:Literal ID="ZglaszajacyIncydent" runat="server"></asp:Literal>
             </td></tr>
-        <tr><td>Diagnoza:</td><td><asp:TextBox ID="DiagnozaIncydentu" runat="server" Height="134px" TextMode="MultiLine" Width="737px"></asp:TextBox></td></tr>
-        <tr><td>Prośba o dane:</td><td><asp:TextBox ID="ProsbaODane" runat="server" Height="91px" TextMode="MultiLine" Width="740px"></asp:TextBox></td></tr>
+        <tr><td>Diagnoza:</td><td><asp:TextBox ID="DiagnozaIncydentu" runat="server" Height="134px" TextMode="MultiLine" Width="737px" ></asp:TextBox></td></tr>
     </table>
     <asp:Button ID="Button1" runat="server" Text="Zapisz" OnClick="Button1_Click" Height="26px" />
     <asp:Button ID="Button3" runat="server" Text="Anuluj" OnClick="Button3_Click" />

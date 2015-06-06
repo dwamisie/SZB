@@ -116,5 +116,10 @@ namespace System_Zarzadzania_BD.Account
                     this.tytul.Text=ex.Message;
                 }
             }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~\\Default.aspx");
+        }
     }
 }

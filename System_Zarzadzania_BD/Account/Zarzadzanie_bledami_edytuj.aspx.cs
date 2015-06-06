@@ -94,9 +94,33 @@ namespace System_Zarzadzania_BD.Account
             Response.Redirect("~\\Account\\Zarzadzanie_bledami.aspx");
         }
 
-        protected void Button3_Click(object sender, EventArgs e)
+        
+        protected void Button3_Click1(object sender, EventArgs e)
         {
-            //zamkniecie bledu
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            try
+            {
+                conn.Open();
+
+                SqlCommand comm2 = new SqlCommand();
+                comm2.Connection = conn;
+                comm2.CommandType = CommandType.StoredProcedure;
+
+                comm2.CommandText = "blad_close";
+                comm2.Parameters.AddWithValue("@id_blad", this.Id_bledu.Text.Trim());
+                comm2.ExecuteNonQuery();
+
+                comm2.Dispose();
+                conn.Close();
+
+                Response.Redirect("~\\Account\\Zarzadzanie_bledami.aspx");
+
+            }
+            catch (Exception ex)
+            {
+                this.opis.Text = ex.Message;
+            }
         }
     }
 }
