@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Web.Configuration;
 using System.Net.Mail;
 using System.Net;
+using System.Configuration;
 
 namespace System_Zarzadzania_BD.Account
 {
@@ -93,23 +94,21 @@ namespace System_Zarzadzania_BD.Account
 
                  //Redirect do strony z komunikatem
 
-                    SmtpClient SMClient = new SmtpClient("poczta.o2.pl");
-                    MailMessage msg = new MailMessage(new MailAddress("gruszczynska_katarzyna@o2.pl"), new MailAddress(Context.User.Identity.Name));
+                    SmtpClient SMClient = new SmtpClient(ConfigurationManager.AppSettings["SMTP_server"].ToString());
+                    MailMessage msg = new MailMessage(new MailAddress(ConfigurationManager.AppSettings["MAilMsgFrom"].ToString()), new MailAddress(Context.User.Identity.Name));
 
-
-                    msg.CC.Add(new MailAddress("marty_w@wp.pl"));
+                    msg.CC.Add(new MailAddress(ConfigurationManager.AppSettings["MAilMsgCC"].ToString()));
 
                     msg.Subject = "[SZB] Zarejestrowano incydent.";
                     msg.Body = "<b>Witam! Właśnie został zarejestrowany incydent Pańskiego produktu.</b> <p>________________________________________________</p> <code>Pozdrawiam,Automatyczny system obsługi SZB</code>  <h4>http://www.szb.azurewebsites.net/</h4>";
                     msg.IsBodyHtml = true;
 
-                    NetworkCredential nc = new NetworkCredential("gruszczynska_katarzyna@o2.pl", "7566436629632");
+                    NetworkCredential nc = new NetworkCredential(ConfigurationManager.AppSettings["SMTP_user"].ToString(), ConfigurationManager.AppSettings["SMTP_user"].ToString());
                     SMClient.Credentials = nc;
 
                     SMClient.Send(msg);
 
                     SMClient.Dispose();
-
                 }
                 catch (Exception ex)
                 {

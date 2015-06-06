@@ -123,9 +123,6 @@ namespace System_Zarzadzania_BD.Account
             }
         }
 
-        protected void Button3_Click1(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
