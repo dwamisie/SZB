@@ -23,6 +23,6 @@
         <tr><td>Opis:</td><td><asp:TextBox ID="opis" runat="server" Width="323px" Height="200px" TextMode="MultiLine"></asp:TextBox></td></tr>
     </table>
     <asp:Button ID="Button1" runat="server" Text="Zapisz" OnClick="Button1_Click" />
-     <asp:Button ID="Button3" runat="server" Text="Zamknij błąd" />
+     <asp:Button ID="Button3" runat="server" Text="Zamknij błąd" OnClick="Button3_Click1" />
      <asp:Button ID="Button2" runat="server" Text="Anuluj" OnClick="Button2_Click" />
 </asp:Content>
