@@ -103,12 +103,14 @@ namespace System_Zarzadzania_BD.Account
                     msg.Body = "<b>Witam! Właśnie został zarejestrowany incydent Pańskiego produktu.</b> <p>________________________________________________</p> <code>Pozdrawiam,Automatyczny system obsługi SZB</code>  <h4>http://www.szb.azurewebsites.net/</h4>";
                     msg.IsBodyHtml = true;
 
-                    NetworkCredential nc = new NetworkCredential(ConfigurationManager.AppSettings["SMTP_user"].ToString(), ConfigurationManager.AppSettings["SMTP_user"].ToString());
+                    NetworkCredential nc = new NetworkCredential(ConfigurationManager.AppSettings["SMTP_user"].ToString(), ConfigurationManager.AppSettings["SMTP_pass"].ToString());
                     SMClient.Credentials = nc;
 
                     SMClient.Send(msg);
 
                     SMClient.Dispose();
+
+                    Response.Redirect("~\\Account\\Komunikat.aspx");
                 }
                 catch (Exception ex)
                 {

@@ -163,6 +163,7 @@
     <Content Include="Account\Klasyfikacja_Slowniki_Edytuj.aspx" />
     <Content Include="Account\Klienci_Slowniki.aspx" />
     <Content Include="Account\Klienci_Slowniki_Edytuj.aspx" />
+    <Content Include="Account\Komunikat.aspx" />
     <Content Include="Account\Konta.aspx" />
     <Content Include="Account\kontakt_ze_zglaszajacym.aspx" />
     <Content Include="Account\Lockout.aspx" />
@@ -403,6 +404,13 @@
     </Compile>
     <Compile Include="Account\Klienci_Slowniki_Edytuj.aspx.designer.cs">
       <DependentUpon>Klienci_Slowniki_Edytuj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Komunikat.aspx.cs">
+      <DependentUpon>Komunikat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Komunikat.aspx.designer.cs">
+      <DependentUpon>Komunikat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Konta.aspx.cs">
       <DependentUpon>Konta.aspx</DependentUpon>
