@@ -122,5 +122,10 @@ namespace System_Zarzadzania_BD.Account
                 this.opis.Text = ex.Message;
             }
         }
+
+        protected void Button3_Click1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

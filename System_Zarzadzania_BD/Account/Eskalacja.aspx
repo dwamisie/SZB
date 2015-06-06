@@ -6,7 +6,7 @@
 
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Powiąż z błędem" />
 
-    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="tytul" DataValueField="id_blad" Height="16px" Width="138px">
+    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="tytul" DataValueField="id_blad" Height="26px" Width="434px">
         </asp:DropDownList>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [id_blad], [tytul] FROM [blad_Wszystkie] where data_zamkniecia is null"></asp:SqlDataSource>
